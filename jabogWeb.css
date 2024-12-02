@@ -47,3 +47,102 @@
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 } 
+
+/* article */
+article {
+  /* placement */
+  margin: 150px 150px 0 400px;
+
+  /* text */
+  text-align: center;
+  font-size: 22px ;
+}
+
+/* Section */
+section {
+  border: 2px solid #111;
+  padding: 20% 5px 20% 5px;
+}
+
+#unity1 {
+  display: none;
+}
+
+/* button */
+.arrow-button {
+  display: flex;
+  color: #818181;
+  background-color: #111;
+  padding: 30px 30px;
+  border-radius: 30px;
+  transition: all .2s ease;
+  /* cursor: pointer; */
+  align-items: center;
+
+  /* height placement */
+  position: fixed;
+}
+
+/* width placement of buttons */
+.left-button {
+  margin-left: 100px;
+}
+
+.right-button {
+  margin-right: 100px;
+}
+
+/* arrow */
+.arrow-button > .arrow {
+  width: 15px;
+  height: 15px;
+  border-right: 3px solid #818181;
+  border-bottom: 3px solid #818181;
+  position: relative;
+  /* transform: rotate(-45deg); */
+  transition: all .2s ease;
+}
+
+.arrow-button > .left {
+  transform: rotate(135deg);
+}
+
+.arrow-button > .right {
+  transform: rotate(-45deg);
+}
+
+/* line of the arrow */
+.arrow-button > .arrow::before {
+  display: block;
+  background-color: currentColor;
+  width: 3px;
+  transform-origin: bottom right;
+  height: 3px;
+  position: absolute;
+  opacity: 0;
+  bottom: calc(-2px / 2);
+  transform: rotate(45deg);
+  transition: all .2s ease;
+  content: "";
+  right: 0;
+}
+
+/* animation of arrow & line */
+.arrow-button:hover > .left {
+  transform: rotate(135deg) translate(4px, 4px);
+}
+
+.arrow-button:hover > .right {
+  transform: rotate(-45deg) translate(4px, 4px);
+}
+
+.arrow-button:hover > .arrow::before {
+  opacity: 1;
+  width: 25px;
+}
+
+.arrow-button:hover {
+  background-color: #111;
+  color: #818181;
+}
+
