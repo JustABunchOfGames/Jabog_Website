@@ -2,7 +2,7 @@
 #banner {
   height: 80px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
@@ -18,7 +18,7 @@
 /* The side navigation menu */
 .sidenav {
   height: 100%; /* 100% Full-height */
-  width: 250px;
+  width: 200px;
   position: fixed; /* Stay in place */
   top: 0;
   left: 0;
@@ -80,16 +80,19 @@ section {
   align-items: center;
 
   /* height placement */
-  position: fixed;
+  position: relative;
+  top: 300px;
 }
 
 /* width placement of buttons */
-.left-button {
-  margin-left: 100px;
+#left-button {
+  left: -100px;
+  float: left;
 }
 
-.right-button {
-  margin-right: 100px;
+#right-button {
+  left: 100px;
+  float: right;
 }
 
 /* arrow */
